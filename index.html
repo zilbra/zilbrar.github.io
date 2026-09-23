@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -8,199 +9,186 @@
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #eeeeee;
             color: #222;
-            line-height: 1.6;
         }
 
+        /* HEADER */
         header {
             background-color: #222;
             color: white;
-            padding: 30px 20px;
             text-align: center;
+            padding: 30px 15px;
         }
 
         header h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
+            margin: 0;
         }
 
         header p {
             color: #ccc;
         }
 
+        /* NAVIGASI */
         nav {
             background-color: #333;
             text-align: center;
             padding: 12px;
-            position: sticky;
-            top: 0;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 12px;
-            font-size: 14px;
+            margin: 0 10px;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
+        /* CONTAINER */
         .container {
             width: 90%;
-            max-width: 1000px;
+            max-width: 900px;
             margin: 25px auto;
         }
 
+        /* SECTION */
         section {
             background-color: white;
             padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            margin-bottom: 25px;
             border: 1px solid #ddd;
+            border-radius: 8px;
         }
 
         section h2 {
-            margin-bottom: 15px;
-            border-bottom: 2px solid #222;
+            border-bottom: 2px solid #333;
             padding-bottom: 8px;
         }
 
         /* PROFIL */
-        .profile {
-            display: flex;
-            gap: 25px;
-            align-items: center;
+        .profil {
+            text-align: center;
         }
 
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 8px;
-            object-fit: cover;
-            border: 2px solid #ddd;
+        .profil p {
+            line-height: 1.6;
         }
 
-        .profile-info h2 {
-            border: none;
-            padding: 0;
-            margin-bottom: 8px;
+        /* DATA DIRI */
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        .profile-info p {
-            margin: 5px 0;
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
         }
 
-        /* TENTANG */
-        .about p {
-            margin-bottom: 10px;
+        td:first-child {
+            width: 30%;
+            font-weight: bold;
+            background-color: #f5f5f5;
         }
 
         /* PENGALAMAN */
-        .experience-item {
-            margin-bottom: 20px;
+        .pengalaman {
+            background-color: #f5f5f5;
             padding: 15px;
+            margin-bottom: 15px;
             border-left: 4px solid #333;
-            background-color: #f7f7f7;
         }
 
-        .experience-item h3 {
-            margin-bottom: 5px;
+        .pengalaman h3 {
+            margin-top: 0;
+        }
+
+        .tombol {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .tombol:hover {
+            background-color: #555;
         }
 
         /* HOBI */
-        .hobby-list {
+        .hobi-container {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
-        .hobby {
-            background-color: #eee;
-            padding: 10px 20px;
-            border-radius: 5px;
+        .hobi {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
         }
 
         /* LAGU */
-        .music-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+        .lagu-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .music-card {
-            border: 1px solid #ddd;
-            padding: 12px;
-            border-radius: 6px;
+        .lagu {
+            flex: 1;
+            min-width: 200px;
             background-color: #fafafa;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
         }
 
-        .music-card img {
+        .lagu img {
             width: 100%;
             aspect-ratio: 1 / 1;
             object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 10px;
         }
 
-        .music-card h3 {
+        .lagu h3 {
             font-size: 16px;
         }
 
-        .music-card p {
-            font-size: 14px;
-            color: #555;
-        }
-
         /* FILM */
-        .movie-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
+        .film-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .movie-card {
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            overflow: hidden;
+        .film {
+            flex: 1;
+            min-width: 200px;
             background-color: #fafafa;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
         }
 
-        .movie-card img {
+        .film img {
             width: 100%;
-            height: 350px;
+            height: 280px;
             object-fit: cover;
         }
 
-        .movie-card .movie-info {
-            padding: 12px;
-        }
-
-        .movie-card h3 {
+        .film h3 {
             font-size: 17px;
-            margin-bottom: 5px;
-        }
-
-        .movie-card p {
-            font-size: 13px;
-            color: #555;
-        }
-
-        /* KONTAK */
-        .contact p {
-            margin: 8px 0;
-        }
-
-        .contact a {
-            color: #222;
         }
 
         /* FOOTER */
@@ -209,29 +197,18 @@
             color: white;
             text-align: center;
             padding: 20px;
-            margin-top: 30px;
         }
 
-        /* RESPONSIVE */
+        /* HP */
         @media (max-width: 700px) {
-
-            .profile {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .music-list,
-            .movie-list {
-                grid-template-columns: 1fr;
+            .lagu,
+            .film {
+                width: 100%;
             }
 
             nav a {
                 display: inline-block;
                 margin: 5px;
-            }
-
-            .movie-card img {
-                height: auto;
             }
         }
     </style>
@@ -241,18 +218,17 @@
 
     <!-- HEADER -->
     <header>
-        <h1>Athan Zilbra</h1>
-        <p>Portofolio Siswa DKV</p>
+        <h1>Portofolio Athan Zilbra</h1>
+        <p>Siswa SMK PGRI 1 Tangerang - Jurusan DKV</p>
     </header>
 
 
     <!-- NAVIGASI -->
     <nav>
         <a href="#profil">Profil</a>
-        <a href="#tentang">Tentang Saya</a>
         <a href="#pengalaman">Pengalaman</a>
         <a href="#hobi">Hobi</a>
-        <a href="#musik">Musik</a>
+        <a href="#lagu">Lagu</a>
         <a href="#film">Film</a>
         <a href="#kontak">Kontak</a>
     </nav>
@@ -261,43 +237,61 @@
     <div class="container">
 
         <!-- PROFIL -->
-        <section id="profil">
-            <div class="profile">
+        <section id="profil" class="profil">
 
-                <img 
-                    class="profile-photo"
-                    src="https://kommodo.ai/i/P7NAGwZ23pId8zUuOYyu"
-                    alt="Foto Athan Zilbra"
-                >
+            <h2>Profil Saya</h2>
 
-                <div class="profile-info">
-                    <h2>Athan Zilbra</h2>
+            <!-- FOTO PROFIL 1:1 -->
+            <img
+                src="https://kommodo.ai/i/MHBvNwh6SzMMZhgOYMC1"
+                alt="Foto Athan Zilbra"
+            >
 
-                    <p><strong>Sekolah:</strong> SMK PGRI 1 Tangerang</p>
-                    <p><strong>Jurusan:</strong> Desain Komunikasi Visual (DKV)</p>
-                    <p><strong>Status:</strong> Siswa</p>
-                    <p><strong>Hobi:</strong> Mendengarkan lagu dan menonton film</p>
-                </div>
+            <h2>Athan Zilbra</h2>
 
-            </div>
+            <p>
+                Halo, saya Athan Zilbra. Saya merupakan siswa
+                SMK PGRI 1 Tangerang jurusan Desain Komunikasi Visual
+                (DKV). Saya memiliki ketertarikan pada dunia kreatif,
+                media, film, dan musik.
+            </p>
+
         </section>
 
 
-        <!-- TENTANG SAYA -->
-        <section id="tentang" class="about">
+        <!-- DATA DIRI -->
+        <section>
 
-            <h2>Tentang Saya</h2>
+            <h2>Data Diri</h2>
 
-            <p>
-                Halo, saya Athan Zilbra. Saya merupakan siswa SMK PGRI 1 Tangerang
-                dari jurusan Desain Komunikasi Visual (DKV).
-            </p>
+            <table>
 
-            <p>
-                Saya tertarik dengan dunia kreatif, terutama desain, media,
-                film, dan pembuatan konten. Saya juga senang mencoba berbagai
-                pengalaman baru untuk menambah kemampuan dan pengalaman saya.
-            </p>
+                <tr>
+                    <td>Nama</td>
+                    <td>Athan Zilbra</td>
+                </tr>
+
+                <tr>
+                    <td>Sekolah</td>
+                    <td>SMK PGRI 1 Tangerang</td>
+                </tr>
+
+                <tr>
+                    <td>Jurusan</td>
+                    <td>Desain Komunikasi Visual (DKV)</td>
+                </tr>
+
+                <tr>
+                    <td>No. HP</td>
+                    <td>089507132979</td>
+                </tr>
+
+                <tr>
+                    <td>Email</td>
+                    <td>athanzilbrar@gmail.com</td>
+                </tr>
+
+            </table>
 
         </section>
 
@@ -307,34 +301,40 @@
 
             <h2>Pengalaman</h2>
 
-            <div class="experience-item">
-                <h3>🎙️ Host Podcast</h3>
+            <div class="pengalaman">
+                <h3>Host Podcast</h3>
 
                 <p>
-                    Pernah menjalani pengalaman sebagai host podcast dan
-                    berperan dalam membawakan serta mengatur jalannya
-                    pembicaraan dalam podcast.
+                    Pernah menjadi host podcast dan bertugas
+                    membawakan serta mengatur jalannya podcast.
                 </p>
             </div>
 
 
-            <div class="experience-item">
-                <h3>🚗 Mengurus Media Rental Mobil</h3>
+            <div class="pengalaman">
+                <h3>Media & Poster Rental Mobil</h3>
 
                 <p>
-                    Pernah mengurus media sosial dan membuat berbagai poster
-                    untuk sebuah rental mobil yang berada di Tangerang.
+                    Pernah mengurus media dan membuat poster
+                    untuk rental mobil di Tangerang.
                 </p>
             </div>
 
 
-            <div class="experience-item">
-                <h3>🎬 Lomba Film</h3>
+            <div class="pengalaman">
+                <h3>Lomba Film</h3>
 
                 <p>
-                    Pernah mengikuti lomba film dan berperan sebagai aktor
-                    dalam sebuah produksi film.
+                    Pernah mengikuti lomba film dan menjadi
+                    aktor dalam sebuah karya film.
                 </p>
+
+                <a
+                    class="tombol"
+                    href="https://kommodo.ai/i/P7NAGwZ23pId8zUuOYyu"
+                    target="_blank">
+                    Lihat Karya Film
+                </a>
             </div>
 
         </section>
@@ -345,14 +345,22 @@
 
             <h2>Hobi</h2>
 
-            <div class="hobby-list">
+            <div class="hobi-container">
 
-                <div class="hobby">
-                    🎧 Mendengarkan Lagu
+                <div class="hobi">
+                    <h3>🎵 Mendengarkan Lagu</h3>
+                    <p>
+                        Saya suka mendengarkan lagu
+                        di waktu senggang.
+                    </p>
                 </div>
 
-                <div class="hobby">
-                    🎬 Menonton Film
+                <div class="hobi">
+                    <h3>🎬 Menonton Film</h3>
+                    <p>
+                        Saya suka menonton berbagai macam
+                        film dan genre.
+                    </p>
                 </div>
 
             </div>
@@ -361,16 +369,15 @@
 
 
         <!-- LAGU FAVORIT -->
-        <section id="musik">
+        <section id="lagu">
 
             <h2>Lagu Favorit</h2>
 
-            <div class="music-list">
+            <div class="lagu-container">
 
-                <!-- Lagu 1 -->
-                <div class="music-card">
+                <div class="lagu">
 
-                    <img 
+                    <img
                         src="https://i.scdn.co/image/ab67616d0000b2733343952bffbdd79f89888cff"
                         alt="Jahanam - Black Horses"
                     >
@@ -381,26 +388,24 @@
                 </div>
 
 
-                <!-- Lagu 2 -->
-                <div class="music-card">
+                <div class="lagu">
 
-                    <img 
+                    <img
                         src="https://i.scdn.co/image/ab67616d0000b273686acaaa87bfc6ebb42b3bd2"
-                        alt="I'd Like To Watch U Sleeping"
+                        alt="I'd Like to Watch U Sleeping"
                     >
 
-                    <h3>I'd Like To Watch U Sleeping</h3>
+                    <h3>I'd Like to Watch U Sleeping</h3>
                     <p>Sal Priadi</p>
 
                 </div>
 
 
-                <!-- Lagu 3 -->
-                <div class="music-card">
+                <div class="lagu">
 
-                    <img 
+                    <img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQnVmJ0sCcDtI0ieNZdUHL49qRXAMSREHaufOYAzMH0_jwxy6dotm2RpE&s=10"
-                        alt="Apalah (Arti Menunggu)"
+                        alt="Apalah Arti Menunggu"
                     >
 
                     <h3>Apalah (Arti Menunggu)</h3>
@@ -418,77 +423,49 @@
 
             <h2>Film Favorit</h2>
 
-            <div class="movie-list">
+            <div class="film-container">
 
-                <!-- FILM 1 -->
-                <div class="movie-card">
+                <!-- DUNE -->
+                <div class="film">
 
-                    <img 
-                        src="https://studios.wearebraindead.com/movies/dune-part-two/"
+                    <img
+                        src="https://posterspy.com/wp-content/uploads/2023/05/Dune-2-Poster-4x5-1.jpg"
                         alt="Dune Part Two"
                     >
 
-                    <div class="movie-info">
-                        <h3>Dune: Part Two</h3>
-                        <p>Film favorit</p>
-                    </div>
+                    <h3>Dune: Part Two</h3>
+
+                    <p>Film favorit saya.</p>
 
                 </div>
 
 
-                <!-- FILM 2 -->
-                <div class="movie-card">
+                <!-- THE HATEFUL EIGHT -->
+                <div class="film">
 
-                    <img 
+                    <img
                         src="https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1_.jpg"
                         alt="The Hateful Eight"
                     >
 
-                    <div class="movie-info">
-                        <h3>The Hateful Eight</h3>
-                        <p>Film favorit</p>
-                    </div>
+                    <h3>The Hateful Eight</h3>
+
+                    <p>Film favorit saya.</p>
 
                 </div>
 
 
-                <!-- FILM 3 -->
-                <div class="movie-card">
+                <!-- SORE -->
+                <div class="film">
 
-                    <img 
+                    <img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa5skB4qjuZXXE_5gU8utD2w-rfknIgMmo-dE3a777QQ&s=10"
                         alt="Sore Istri dari Masa Depan"
                     >
 
-                    <div class="movie-info">
-                        <h3>Sore: Istri dari Masa Depan</h3>
-                        <p>Film favorit</p>
-                    </div>
+                    <h3>Sore: Istri dari Masa Depan</h3>
 
-                </div>
-
-
-                <!-- FILM 4 -->
-                <div class="movie-card">
-
-                    <div style="
-                        height: 350px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: #eee;
-                        color: #777;
-                        text-align: center;
-                        padding: 20px;
-                    ">
-                        Foto film ke-4<br>
-                        belum ditambahkan
-                    </div>
-
-                    <div class="movie-info">
-                        <h3>Film Favorit #4</h3>
-                        <p>Tambahkan gambar film favoritmu di sini.</p>
-                    </div>
+                    <p>Film favorit saya.</p>
 
                 </div>
 
@@ -498,36 +475,19 @@
 
 
         <!-- KONTAK -->
-        <section id="kontak" class="contact">
+        <section id="kontak">
 
             <h2>Kontak</h2>
 
             <p>
-                <strong>Nama:</strong> Athan Zilbra
+                <b>No. HP:</b> 089507132979
             </p>
 
             <p>
-                <strong>No. HP:</strong>
-                <a href="tel:089507132979">
-                    089507132979
-                </a>
-            </p>
-
-            <p>
-                <strong>Email:</strong>
+                <b>Email:</b>
                 <a href="mailto:athanzilbrar@gmail.com">
                     athanzilbrar@gmail.com
                 </a>
-            </p>
-
-            <p>
-                <strong>Sekolah:</strong>
-                SMK PGRI 1 Tangerang
-            </p>
-
-            <p>
-                <strong>Jurusan:</strong>
-                Desain Komunikasi Visual
             </p>
 
         </section>
@@ -543,3 +503,4 @@
 
 </body>
 </html>
+```
